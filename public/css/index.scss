@@ -1,0 +1,85 @@
+$principalColor: #21759B;
+$principalFont: "Segoe UI";
+
+
+body, html{
+    margin: 0;
+    background-color: $principalColor;
+}
+
+    ::-webkit-scrollbar {
+    width: 15px;
+  }
+  ::-webkit-scrollbar-track {
+    background: $principalColor;
+  }
+  ::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.800);
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.9)
+  }
+
+nav{
+    width: 100%;
+    ul{
+        display: grid;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+        grid-template-columns: repeat(7, auto);
+    }
+    li{
+        font-family: $principalFont;
+        list-style: none;
+        color: white;
+        font-size: 36px;
+        display: inline-block;
+        margin-left: 3%;
+    }  
+    li:hover{
+        cursor: pointer;
+        text-decoration: underline;
+    }
+    li:first-child{
+        margin-top: 5px;
+        margin-left: 40px;
+    }
+    li:last-child{
+        float: right;
+    }
+}
+#logo{
+    width: 150px;
+    height: 150px;
+}
+#loginBtn{
+    font-size: 36px;
+    font-family: $principalFont;
+    color: $principalColor;
+    font-weight: 800;
+    padding: 5px 25px;
+    border-radius: 15px;
+    background-color: rgba(255, 255, 255, 0.801);
+    border: none;
+    box-shadow: 3px 3px 5px #001522ab;
+}
+#loginBtn:focus{
+    outline: none;
+}
+#imageHeader{
+    margin-top: 35px;
+    min-height: 85vh;
+    img{
+        width: 100;
+        max-width: 100%;
+    }
+    h1{
+        margin-top: 5px;
+        text-align: center;
+        color: white;
+        font-size: 108px;
+        font-family: $principalFont;
+    }
+}
