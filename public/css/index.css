@@ -1,6 +1,17 @@
+@font-face {
+  font-family: MontserratBold;
+  src: url("../fonts/MontserratAlternatesBold.ttf");
+}
+
+@font-face {
+  font-family: MontserratMedium;
+  src: url("../fonts/MontserratAlternatesMedium.ttf");
+}
+
 body, html {
   margin: 0;
   background-color: #21759B;
+  overflow-x: hidden;
 }
 
 ::-webkit-scrollbar {
@@ -8,7 +19,7 @@ body, html {
 }
 
 ::-webkit-scrollbar-track {
-  background: #21759B;
+  background: #144257;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -20,8 +31,24 @@ body, html {
   background: rgba(255, 255, 255, 0.9);
 }
 
-nav {
+#start {
+  top: 0;
+  position: absolute;
   width: 100%;
+  min-height: 1px;
+}
+
+nav {
+  background: #21759B;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
 }
 
 nav ul {
@@ -37,7 +64,7 @@ nav ul {
 }
 
 nav li {
-  font-family: "Segoe UI";
+  font-family: MontserratBold;
   list-style: none;
   color: white;
   font-size: 36px;
@@ -60,13 +87,13 @@ nav li:last-child {
 }
 
 #logo {
-  width: 150px;
-  height: 150px;
+  width: 70px;
+  height: 70px;
 }
 
 #loginBtn {
   font-size: 36px;
-  font-family: "Segoe UI";
+  font-family: MontserratBold;
   color: #21759B;
   font-weight: 800;
   padding: 5px 25px;
@@ -82,7 +109,7 @@ nav li:last-child {
 }
 
 #imageHeader {
-  margin-top: 35px;
+  margin-top: 180px;
   min-height: 85vh;
 }
 
@@ -96,6 +123,68 @@ nav li:last-child {
   text-align: center;
   color: white;
   font-size: 108px;
-  font-family: "Segoe UI";
+  font-family: MontserratBold;
+}
+
+#aboutSection {
+  width: 100%;
+  min-height: 100vh;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background: #EAB75F;
+  padding: 8% 15%;
+  position: relative;
+}
+
+#aboutSection h1 {
+  font-size: 5em;
+  text-align: center;
+  font-family: MontserratBold;
+}
+
+#aboutSection p {
+  font-size: 2em;
+  text-align: justify;
+  font-family: MontserratMedium;
+}
+
+#aboutSection #star1 {
+  position: absolute;
+  left: 0;
+  bottom: 90px;
+}
+
+#aboutSection #star2 {
+  position: absolute;
+  left: 10%;
+  bottom: 0%;
+}
+
+#write {
+  width: 100%;
+  min-height: 100vh;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background: #E1A993;
+  padding: 8% 15%;
+  position: relative;
+}
+
+#write h1 {
+  font-size: 5em;
+  text-align: center;
+  font-family: MontserratBold;
+}
+
+#write p {
+  font-size: 2em;
+  text-align: justify;
+  font-family: MontserratMedium;
+}
+
+#write img {
+  position: absolute;
+  right: 90px;
+  bottom: 0;
 }
 /*# sourceMappingURL=index.css.map */

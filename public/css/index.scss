@@ -1,28 +1,49 @@
 $principalColor: #21759B;
-$principalFont: "Segoe UI";
-
-
+@font-face{
+    font-family: MontserratBold;
+    src: url("../fonts/MontserratAlternatesBold.ttf");
+}
+@font-face{
+    font-family: MontserratMedium;
+    src: url("../fonts/MontserratAlternatesMedium.ttf");
+}
+$principalFont: MontserratBold;
+$secondaryFont: MontserratMedium;
 body, html{
     margin: 0;
     background-color: $principalColor;
+    overflow-x: hidden;
 }
-
-    ::-webkit-scrollbar {
+::-webkit-scrollbar {
     width: 15px;
-  }
-  ::-webkit-scrollbar-track {
-    background: $principalColor;
-  }
-  ::-webkit-scrollbar-thumb {
+}
+::-webkit-scrollbar-track {
+    background: #144257;
+}
+::-webkit-scrollbar-thumb {
     border-radius: 5px;
     background: rgba(255, 255, 255, 0.800);
-  }
-  ::-webkit-scrollbar-thumb:hover {
+}
+::-webkit-scrollbar-thumb:hover {
     background: rgba(255, 255, 255, 0.9)
-  }
+}
+ #start{
+     top: 0;
+     position: absolute;
+     width: 100%;
+     min-height: 1px;
 
+ }
 nav{
+    background: $principalColor;
+    position: fixed;
     width: 100%;
+    top: 0;
+    z-index: 1000;
+    a{
+        color: white;
+        text-decoration: none;
+    }
     ul{
         display: grid;
         align-items: center;
@@ -51,8 +72,9 @@ nav{
     }
 }
 #logo{
-    width: 150px;
-    height: 150px;
+    width: 70px;
+    height: 70px;
+
 }
 #loginBtn{
     font-size: 36px;
@@ -69,7 +91,7 @@ nav{
     outline: none;
 }
 #imageHeader{
-    margin-top: 35px;
+    margin-top: 180px;
     min-height: 85vh;
     img{
         width: 100;
@@ -81,5 +103,56 @@ nav{
         color: white;
         font-size: 108px;
         font-family: $principalFont;
+    }
+}
+#aboutSection{
+    width: 100%;
+    min-height: 100vh;
+    box-sizing: border-box;
+    background: #EAB75F;
+    padding: 8% 15%;
+    position: relative;
+    h1{
+        font-size: 5em;
+        text-align: center;
+        font-family: $principalFont;
+    }
+    p{
+        font-size: 2em;
+        text-align: justify;
+        font-family: $secondaryFont;
+    }
+    #star1{
+        position: absolute;
+        left: 0;
+        bottom: 90px;
+    }
+    #star2{
+        position: absolute;
+        left: 10%;
+        bottom: 0%;
+    }
+}
+#write{
+    width: 100%;
+    min-height: 100vh;
+    box-sizing: border-box;
+    background: #E1A993;
+    padding: 8% 15%;
+    position: relative;
+    h1{
+        font-size: 5em;
+        text-align: center;
+        font-family: $principalFont;
+    }
+    p{
+        font-size: 2em;
+        text-align: justify;
+        font-family: $secondaryFont;
+    }
+    img{
+        position: absolute;
+        right: 90px;
+        bottom: 0;
     }
 }
